@@ -1,0 +1,52 @@
+.pub-list {
+  margin: 30px 20px;
+}
+
+.pub-list section {
+  margin: 20px;
+}
+
+.pub-list h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-size: large;
+  text-align: left;
+  margin-left: -15px;
+  margin-bottom: 20px;
+}
+
+section li {
+  margin: 10px 0;
+}
+
+.pub-list a {
+  /* text-decoration: none; */
+  color: lightgreen;
+}
+
+.pub-list a:hover {
+  color: lightgreen;
+}
+
+span.author {
+  font-variant: small-caps;
+}
+
+span.title {
+  font-style: italic;
+  color: whitesmoke;
+}
+
+#journals,
+#bookChap,
+#myTechRep,
+#workshops {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 320px) {
+  .pub-list {
+    font-size: 0.7rem;
+  }
+}

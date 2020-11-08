@@ -3,5 +3,10 @@ fetch("./html_snippets/navbar.html")
   return response.text()
 })
 .then(data => {
-  document.querySelector("header").innerHTML = data;
+  const header =  document.querySelector("header");
+  header.innerHTML = data;
+  // const navbar = document.querySelector('header .navbar');
+  // console.log(navbar);
+  // navbar.style.position = 'sticky';
+  // navbar.style.top = '20px';
 });
