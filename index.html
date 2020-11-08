@@ -20,20 +20,39 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" defer>
 
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet" defer>
+
   <link rel="stylesheet"  href="static/styles.css">
+  <link rel="stylesheet"  href="static/index.css">
 </head>
 <body>
   <div class="main">
     <header></header>
+    <section class="presentation">
+      <div>
+        <div class="image">
+          <img src="static/img/picture_github.jpg" alt="picture">
+          <div class="contacts">
+            <a href="https://www.linkedin.com/in/alfio-martini-32012423/" target="_blank">
+              <i class="fab fa-linkedin fa-2x text-white  mr-2"></i>
+            </a>
+            <a href="https://twitter.com/alfio_martini" target="_blank">
+              <i class="fab fa-twitter-square fa-2x text-white  mr-2"></i>
+            </a>
+            <a href="mailto:alfio.martini@gmail.com">
+              <i class="fas fa-at fa-2x text-white mr-2"></i>
+            </a>
+            <a href="https://github.com/alfiomartini" target="_blank">
+              <i class="fab fa-github-square fa-2x text-white  mr-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        Hi, I'm Alfio Martini, a computer scientist especially interested in <span class="color">full-stack web development</span> and the applications of <span class="color">Logic in Computer Science</span>.
+      </div>
+    </section>
   </div>
-  <script>
-    fetch("./html_snippets/navbar.html")
-    .then(response => {
-      return response.text()
-    })
-    .then(data => {
-      document.querySelector("header").innerHTML = data;
-    });
-  </script>
+  <script src="./static/fetch_navbar.js"></script>
 </body>
 </html>
