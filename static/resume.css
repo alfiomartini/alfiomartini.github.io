@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .resume > section {
@@ -11,7 +12,7 @@
 }
 
 .resume .title {
-  color: lightgreen;
+  color: lightsteelblue;
 }
 
 .resume > section > div {
@@ -25,4 +26,15 @@
 
 .resume ul > li {
   padding: 5px;
+}
+
+.resume ul > li > a {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+.resume .thesis {
+  font-variant: small-caps;
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  /* color: lightsteelblue; */
 }
