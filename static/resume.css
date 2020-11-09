@@ -1,0 +1,28 @@
+.resume {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.resume > section {
+  width: 300px;
+  margin: 15px;
+}
+
+.resume .title {
+  color: lightgreen;
+}
+
+.resume > section > div {
+  margin: 10px;
+  padding: 10px;
+}
+.resume ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.resume ul > li {
+  padding: 5px;
+}
