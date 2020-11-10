@@ -6,6 +6,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.resume div {
+  border-radius: 5px;
+}
+
 .resume > section {
   width: 300px;
   margin: 15px;
