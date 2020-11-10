@@ -8,7 +8,7 @@
 }
 
 .presentation img {
-  width: 250px;
+  width: 270px;
   height: 200px;
   margin-right: 30px;
   border-radius: 10px;
@@ -57,7 +57,7 @@
 
 @media (max-width: 420px) {
   .presentation img {
-    width: 150px;
+    width: 170px;
     height: 130px;
   }
 
@@ -86,14 +86,14 @@
   }
 
   .presentation img {
-    width: 150px;
+    width: 160px;
     height: 120px;
   }
 }
 
 @media (max-width: 330px) {
   .presentation img {
-    width: 130px;
+    width: 140px;
     height: 110px;
     margin-top: 0px;
   }
