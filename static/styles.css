@@ -18,7 +18,7 @@ body {
 /* Navbar */
 
 /* https://stackoverflow.com/questions/52580504/why-is-my-sticky-top-class-not-working-in-bootstrap-4 */
-header {
+.main .header {
   position: sticky;
   top: 20px;
 }
