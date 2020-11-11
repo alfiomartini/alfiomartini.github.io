@@ -1,0 +1,49 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  min-width: 100%;
+}
+
+.projects .project {
+  margin: 30px 0;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project .readme {
+  color: whitesmoke;
+  background-color: #343a40;
+  width: 500px;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.project .video {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.project iframe {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid lightsteelblue;
+}
+
+.project .video-btns {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
