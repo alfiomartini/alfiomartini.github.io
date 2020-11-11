@@ -18,6 +18,10 @@
   flex-wrap: wrap;
 }
 
+.project:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
 .project .readme {
   color: whitesmoke;
   background-color: #343a40;
