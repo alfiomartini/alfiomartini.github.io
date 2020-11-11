@@ -51,3 +51,23 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* Media queries */
+
+@media (max-width: 500px) {
+  .project iframe {
+    width: 350px;
+    height: 175px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project iframe {
+    width: 250px;
+    height: 125px;
+  }
+
+  .project .readme {
+    display: none;
+  }
+}

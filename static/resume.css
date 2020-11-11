@@ -6,6 +6,18 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.skills {
+  order: 2;
+}
+
+.education {
+  order: 1;
+}
+
+.experience {
+  order: 3;
+}
+
 .resume div {
   border-radius: 5px;
 }
@@ -41,4 +53,14 @@
   font-variant: small-caps;
   /* font-family: Georgia, "Times New Roman", Times, serif; */
   /* color: lightsteelblue; */
+}
+
+@media (max-width: 1050px) {
+  .resume {
+    display: block;
+  }
+
+  .resume > section {
+    margin: 30px auto;
+  }
 }
