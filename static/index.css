@@ -42,9 +42,13 @@
 
 /* Media Queries */
 
-@media (min-height: 1200px) {
+@media (min-height: 1000px) {
   .presentation {
-    margin-top: 400px;
+    margin-top: 340px;
+  }
+
+  .contacts i {
+    font-size: 60px;
   }
 }
 
