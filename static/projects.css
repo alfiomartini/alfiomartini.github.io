@@ -32,6 +32,11 @@
   text-align: justify;
 }
 
+.project .readme h5 {
+  color: lightblue;
+  text-align: center;
+  /* font-variant: small-caps; */
+}
 .project .video {
   display: flex;
   flex-direction: column;
