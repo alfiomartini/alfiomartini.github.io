@@ -49,13 +49,13 @@
 
 @media (max-width: 1024px) {
   .presentation .image img {
-    width: 45%;
+    width: 35%;
     height: auto;
   }
 
   .presentation .about {
     width: 70vw;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -66,6 +66,10 @@
 }
 
 @media (max-width: 600px) {
+  .presentation .image img {
+    width: 40%;
+    height: auto;
+  }
   .presentation .about {
     font-size: 16px;
   }
@@ -73,14 +77,22 @@
 
 @media (max-width: 500px) {
   .presentation .image img {
-    width: 65%;
+    width: 50%;
     height: auto;
   }
 }
 
 @media (max-width: 400px) {
+  .presentation .image img {
+    width: 60%;
+    height: auto;
+  }
   .contacts i {
     font-size: 25px;
+  }
+
+  .presentation .about {
+    width: 80vw;
   }
 }
 

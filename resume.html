@@ -101,21 +101,22 @@
           Experience
         </div>
         <div class="pucrs-exp mb-3 bg-dark">
-          <span class="title">PUCRS - 2002-2019</span>
+          <span class="title">PUCRS (2002 - 2019)</span>
           <ul>
             <li>Associate Professor </li>
-            <li>CS Course Coordinator (2012-2018)</li>
-            <li>Tutor of Government's Tutorial Education Program, PET (01/2018-01/2019)</li>
-            <li>Tutor of Government's Tutorial Education Program, PET (01/2005-01/2010)</li>
-            <li><span class="thesis">Teaching: </span> Data Structures, Logic for CS, Theory of Computation, Formal Languages, Formal Methods, 
-                Functional Programming</li>
+            <li>CS Course Coordinator (2012 - 2018)</li>
+            <li>Tutor of Government's Tutorial Education Program, 
+              <a href="http://portal.mec.gov.br/pet" target="_blank">PET</a> (2018 - 2019)</li>
+            <li>Tutor of Government's Tutorial Education Program, 
+              <a href="http://portal.mec.gov.br/pet" target="_blank">PET</a> (2005 - 2010)</li>
+            <li><span class="thesis">Teaching: </span> <span class="title">Data Structures, Logic for CS, Theory of Computation, Formal Languages, Formal Methods, Functional Programming</span></li>
           </ul>
         </div>
         <div class="ulbra-exp mb-3 bg-dark">
-          <span class="title">ULBRA - 1999-2002</span>
+          <span class="title">ULBRA (1999 - 2002)</span>
           <ul>
             <li>Associate Professor </li>
-            <li><span class="thesis">Teaching:</span> Logic for CS, Theory of Computation, Formal Languages
+            <li><span class="thesis">Teaching:</span> <spn class="title"> Logic for CS, Theory of Computation, Formal Languages</spn>
             </li>
           </ul>
         </div>
@@ -124,19 +125,12 @@
   </div>
   <script src="./static/fetch_navbar.js"></script>
   <script>
-    const skills = document.querySelector('.skills');
-    const experience = document.querySelector('.experience');
-    const education = document.querySelector('.education');
-    const collapse = document.createElement('section');
-    const resume = document.querySelector('.resume');
-    window.addEventListener('resize', () => {
+    function layout(){
       resume.innerHTML = '';
       let width = window.innerWidth;
       if (width <= 1020  && width >= 696){
-        // console.log(width);
         collapse.append(skills);
         collapse.append(experience);
-        // console.log(section);
         resume.append(education);
         resume.append(collapse);
       } else if (width > 696){
@@ -149,7 +143,15 @@
         resume.append(education);
         resume.append(experience);
       }
-    })
+    }
+
+    const skills = document.querySelector('.skills');
+    const experience = document.querySelector('.experience');
+    const education = document.querySelector('.education');
+    const collapse = document.createElement('section');
+    const resume = document.querySelector('.resume');
+    layout();
+    window.addEventListener('resize', layout);
   </script>
 </body>
 </html>
