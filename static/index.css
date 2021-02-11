@@ -3,8 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  margin-top: 160px;
+  justify-content: center;
 }
 
 .presentation .image img {
@@ -43,10 +42,6 @@
 /* Media Queries */
 
 @media (min-height: 1000px) {
-  .presentation {
-    margin-top: 340px;
-  }
-
   .contacts i {
     font-size: 60px;
   }
@@ -59,8 +54,8 @@
   }
 
   .presentation .about {
-    width: 80vw;
-    font-size: 18px;
+    width: 70vw;
+    font-size: 24px;
   }
 }
 
@@ -71,9 +66,6 @@
 }
 
 @media (max-width: 600px) {
-  .presentation {
-    margin-top: 120px;
-  }
   .presentation .about {
     font-size: 16px;
   }

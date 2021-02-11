@@ -31,7 +31,8 @@
   color: lightsteelblue;
 }
 
-.resume > section > div {
+.resume > section > div,
+.resume > section > section > div {
   margin: 10px;
   padding: 10px;
 }
@@ -55,13 +56,14 @@
   /* color: lightsteelblue; */
 }
 
-@media (max-width: 1020px) {
-  .resume {
-    display: block;
-  }
-
+@media (max-width: 696px) {
   .resume > section {
-    margin: 20px auto;
+    display: block;
+    margin: auto;
+    width: 90%;
+  }
+  .skills {
+    order: 1;
   }
 }
 

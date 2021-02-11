@@ -62,7 +62,7 @@
                 Gift - A Github Finder Tool
               </a></li>
              <li>CS50's Introduction to Computer Science
-                <a href="./static/pdf/HarvardX CS50 Certificate _ edX_.pdf"
+                <a href="https://courses.edx.org/certificates/794f1eec5a3244e881318db6a2b61e5a"
                     target="_blank">
                 <i class="fas fa-certificate ml-2"></i>
                 </a>
@@ -107,7 +107,7 @@
             <li>CS Course Coordinator (2012-2018)</li>
             <li>Tutor of Government's Tutorial Education Program, PET (01/2018-01/2019)</li>
             <li>Tutor of Government's Tutorial Education Program, PET (01/2005-01/2010)</li>
-            <li><span class="thesis">Teaching: </span> Logic for CS, Theory of Computation, Formal Languages, Formal Methods, 
+            <li><span class="thesis">Teaching: </span> Data Structures, Logic for CS, Theory of Computation, Formal Languages, Formal Methods, 
                 Functional Programming</li>
           </ul>
         </div>
@@ -123,5 +123,33 @@
     </div>
   </div>
   <script src="./static/fetch_navbar.js"></script>
+  <script>
+    const skills = document.querySelector('.skills');
+    const experience = document.querySelector('.experience');
+    const education = document.querySelector('.education');
+    const collapse = document.createElement('section');
+    const resume = document.querySelector('.resume');
+    window.addEventListener('resize', () => {
+      resume.innerHTML = '';
+      let width = window.innerWidth;
+      if (width <= 1020  && width >= 696){
+        // console.log(width);
+        collapse.append(skills);
+        collapse.append(experience);
+        // console.log(section);
+        resume.append(education);
+        resume.append(collapse);
+      } else if (width > 696){
+        resume.append(education);
+        resume.append(skills);
+        resume.append(experience);
+      }
+      else {
+        resume.append(skills);
+        resume.append(education);
+        resume.append(experience);
+      }
+    })
+  </script>
 </body>
 </html>
