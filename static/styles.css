@@ -42,3 +42,7 @@ header .navbar .dropdown-menu .dropdown-item:hover {
   background-color: whitesmoke;
   color: #12232e;
 }
+
+.pdf {
+  color: whitesmoke;
+}
