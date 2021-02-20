@@ -43,9 +43,14 @@
   margin: 20px;
 }
 
+/* https://stackoverflow.com/questions/52907205/html-youtube-iframe-player-is-blurry-but-video-itself-is-fine 
+https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-background-size-cover/33564334#33564334
+*/
 .project iframe {
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: calc(450px / 1.78);
+  /* width: 26vw;
+  height: calc(26vw / 1.78); */
   border-radius: 10px;
   border: 2px solid lightsteelblue;
 }
