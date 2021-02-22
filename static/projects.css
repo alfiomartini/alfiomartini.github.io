@@ -43,6 +43,11 @@
 
 .project .readme ul li button {
   float: right;
+  margin: 5px;
+}
+
+.project .readme ul li {
+  margin: 5x;
 }
 
 .project .readme h5 {
@@ -61,7 +66,7 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
 */
 .project iframe {
   width: 450px;
-  height: calc(450px / 1.78);
+  height: calc(450px / 1.77);
   /* width: 26vw;
   height: calc(26vw / 1.78); */
   border-radius: 10px;
