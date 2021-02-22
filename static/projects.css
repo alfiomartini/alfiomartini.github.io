@@ -32,6 +32,19 @@
   text-align: justify;
 }
 
+.project .readme .code {
+  text-align: left;
+}
+
+.project .readme ul {
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.project .readme ul li button {
+  float: right;
+}
+
 .project .readme h5 {
   color: lightblue;
   text-align: center;

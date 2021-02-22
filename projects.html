@@ -37,10 +37,41 @@
         <div class="video">
           <!-- <iframe src="https://www.youtube.com/embed/n7d-GuEKhdo?autoplay=1&mute=1" frameborder="0" 
           allowfullscreen></iframe> -->
-          <iframe  src="https://www.youtube.com/embed/n7d-GuEKhdo?controls=0" frameborder="0"   allowfullscreen></iframe>
+          <iframe  src="https://www.youtube.com/embed/n7d-GuEKhdo?controls=0&loop=1&playlist=n7d-GuEKhdo" frameborder="0" allow="gyroscope; picture-in-picture"></iframe>
           <div class="video-btns">
             <a class="btn btn-info btn-sm" href="https://alfiomartini.github.io/widgets/" target="_blank">Live</a>
             <a class="btn btn-info btn-sm" href="https://github.com/alfiomartini/widgets" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-name=''>
+        <div class="readme">
+          <h5>A Flask Server for Widgets Collection</h5>
+          <p>Server endpoints:</p>
+          <ul>
+          <li>GET /youtube/{<em>subject</em>}: return a JSON list of videos about subject. 
+            <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#youtube">
+             Code</button></li>  
+          <p class="code collapse" id="youtube"><code>curl https://widgets-flask.herokuapp.com/youtube/NicoleCross</code></p>
+
+          <li>GET /unsplash/{<em>subject</em>}: return a JSON list of images related to subject.
+            <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#unsplash">
+              Code</button
+          </li>
+          <p class="code collapse" id="unsplash"><code>curl https://widgets-flask.herokuapp.com/unsplash/libraries</code></p>
+
+          <li>POST /translate : return JSON data with source text translated to target language.
+            <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#translate">
+              Code</button
+          </li>
+          <p class="code collapse" id="translate"><code>curl -X POST -H "Content-Type: application/json" -d '{"input":"Hello World", "code":"pt"}' https://widgets-flask.herokuapp.com/translate</code></p>
+          </ul>
+        </div>
+        <div class="video">
+          <iframe  src="https://www.youtube.com/embed/9_tDUxvW8_k?controls=0&loop=1&playlist=9_tDUxvW8_k" frameborder="0" allow="gyroscope; picture-in-picture"></iframe>
+          <div class="video-btns">
+            <a class="btn btn-info btn-sm" href="https://widgets-flask.herokuapp.com/" target="_blank">Live</a>
+            <a class="btn btn-info btn-sm" href="https://github.com/alfiomartini/widgets_flask" target="_blank">Code</a>
           </div>
         </div>
       </div>
@@ -183,8 +214,13 @@
   <script src="./static/fetch_navbar.js"></script>
   <script>
     // const iframe = document.querySelector('.video iframe');
-    // console.log(iframe);
-    // console.log(iframe.clientWidth);
+    // iframe.addEventListener('fullscreenchange', () => {
+    //   console.log(iframe);
+    //   console.log('fullscreenchange');
+    //   iframe.style.width = '100vw';
+    //   const height = Math.ceil(100/1.78);
+    //   iframe.style.height = `${height}vh`;
+    // });
   </script>
 </body>
 </html>
