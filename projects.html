@@ -49,20 +49,21 @@
           <h5>A Flask Server for Widgets Collection</h5>
           <p>This small server is comprised by the following endpoints:</p>
           <ul>
-          <li>GET /youtube/{<em>subject</em>}: return a JSON list of videos about subject. 
+          <li>GET /youtube/{<em>subject</em>}: return a JSON list of videos about <em>subject</em>. 
             <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#youtube">
              Code</button></li>  
           <p class="code collapse" id="youtube"><code>curl https://widgets-flask.herokuapp.com/youtube/NicoleCross</code></p>
 
-          <li>GET /unsplash/{<em>subject</em>}: return a JSON list of images related to subject.
+          <li>GET /unsplash/{<em>subject</em>}: return a JSON list of images related to <em>subject</em>.
             <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#unsplash">
-              Code</button
+              Code</button>
           </li>
           <p class="code collapse" id="unsplash"><code>curl https://widgets-flask.herokuapp.com/unsplash/libraries</code></p>
 
-          <li>POST /translate : return JSON data with source text translated to target language.
+          <li>POST /translate : return JSON data with source text translated to target language. Requires 
+            <em>input</em> text and language <em>code</em>.
             <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#translate">
-              Code</button
+              Code</button>
           </li>
           <p class="code collapse" id="translate"><code>curl -X POST -H "Content-Type: application/json" -d '{"input":"Hello World", "code":"pt"}' https://widgets-flask.herokuapp.com/translate</code></p>
           </ul>
@@ -86,6 +87,55 @@
           <div class="video-btns">
             <a class="btn btn-info btn-sm" href="https://alfiomartini.github.io/face-detection-front/" target="_blank">Live</a>
             <a class="btn btn-info btn-sm" href="https://github.com/alfiomartini/face-detection-front" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project" data-name=''>
+        <div class="readme">
+          <h5>A Node.js Server for the Face Detection App</h5>
+          <p>  The server implements the backend database
+          needed to store information about users (using PostgreSQL) and also encapsulate private keys needed to
+          access the Clarifai API. The server is comprised of the following endpoints:</p>
+
+          <ul>
+          <li>POST /register: Signs up a new user and returns JSON data about new user (name, email, number of entries and
+          sign up date). 
+          <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#register">
+            Code</button>
+          </li>
+  
+          <p class="code collapse" id= register><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/register</code></p>
+
+          
+          <li>POST /signin: Logs in the user and returns basic JSON data about the user.
+            <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#signin">
+              Code</button>
+          </li>
+          
+          <p class="code collapse" id=signin><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/signin</code></p>
+
+        
+          <li>POST /model: If human faces are detected, it returns the coordinate locations of those faces with a bounding box.
+          The returned æbounding_boxÆ values are the coordinates of the box outlining each face within the image.
+          <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#model">
+            Code</button>
+        </li>
+          
+          <p class="code collapse" id=model><code>curl -X POST -H "Content-Type: application/json" -d '{"image_url":"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_beauty.png"}' https://facedet-api.herokuapp.com/model</code></p>
+
+          
+          <li>PUT /entries: Increments the number of image entries of user denoted by email data.
+            <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#entries">
+              Code</button>
+          </li>
+          <p class="code collapse" id=entries><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com"}' https://facedet-api.herokuapp.com/entries</code></p>
+          </ul>
+        </div>
+        <div class="video">
+          <iframe  src="https://www.youtube.com/embed/nCgXRdqbZ0w?controls=0&loop=1&playlist=nCgXRdqbZ0w" frameborder="0" allow="gyroscope; picture-in-picture"></iframe>
+          <div class="video-btns">
+            <a class="btn btn-info btn-sm" href="https://facedet-api.herokuapp.com/" target="_blank">Live</a>
+            <a class="btn btn-info btn-sm" href="https://github.com/alfiomartini/face-detection-api" target="_blank">Code</a>
           </div>
         </div>
       </div>

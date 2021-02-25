@@ -42,7 +42,7 @@
 }
 
 .project .readme ul li button {
-  float: right;
+  /* float: right; */
   margin: 5px;
 }
 
