@@ -98,37 +98,44 @@
           access the Clarifai API. The server is comprised of the following endpoints:</p>
 
           <ul>
-          <li>POST /register: Signs up a new user and returns JSON data about new user (name, email, number of entries and
+          <li>POST /<em>register</em>: Signs up a new user and returns JSON data about new user (name, email, number of entries and
           sign up date). 
           <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#register">
             Code</button>
           </li>
   
-          <p class="code collapse" id= register><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/register</code></p>
+          <p class="code collapse" id="register"><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/register</code></p>
 
           
-          <li>POST /signin: Logs in the user and returns basic JSON data about the user.
+          <li>POST /<em>signin</em>: Logs in the user and returns basic JSON data about the user.
             <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#signin">
               Code</button>
           </li>
           
-          <p class="code collapse" id=signin><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/signin</code></p>
+          <p class="code collapse" id="signin">
+            <code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com", "password":"hello"}' https://facedet-api.herokuapp.com/signin
+            </code>
+          </p>
 
         
-          <li>POST /model: If human faces are detected, it returns the coordinate locations of those faces with a bounding box.
-          The returned æbounding_boxÆ values are the coordinates of the box outlining each face within the image.
+          <li>POST /<em>model</em>: If human faces are detected, it returns the coordinate locations of those faces with a bounding box.
+          The returned bounding box values are the coordinates of the box outlining each face within the image.
           <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#model">
             Code</button>
         </li>
           
-          <p class="code collapse" id=model><code>curl -X POST -H "Content-Type: application/json" -d '{"image_url":"https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_beauty.png"}' https://facedet-api.herokuapp.com/model</code></p>
+          <p class="code collapse" id="model">
+            <code>curl -X POST -H "Content-Type: application/json" -d '{"image_url":"http://tiny.cc/7rpqtz"}' 
+              https://facedet-api.herokuapp.com/model
+            </code>
+          </p>
 
           
-          <li>PUT /entries: Increments the number of image entries of user denoted by email data.
+          <li>PUT /<em>entries</em>: Increments the number of image entries of user denoted by email data.
             <button class="btn btn-warning btn-sm py-0" data-toggle="collapse" data-target="#entries">
               Code</button>
           </li>
-          <p class="code collapse" id=entries><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com"}' https://facedet-api.herokuapp.com/entries</code></p>
+          <p class="code collapse" id="entries"><code>curl -X POST -H "Content-Type: application/json" -d '{"email":"johndoe@gmail.com"}' https://facedet-api.herokuapp.com/entries</code></p>
           </ul>
         </div>
         <div class="video">
