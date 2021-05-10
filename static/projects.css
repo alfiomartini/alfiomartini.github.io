@@ -51,6 +51,9 @@
   margin: 5x;
 }
 
+code {
+  color: lightgreen;
+}
 .project .readme h5 {
   color: lightblue;
   text-align: center;
