@@ -1,5 +1,5 @@
 .presentation {
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,6 @@
 
 .presentation .image img {
   width: 25%;
-  height: auto;
   margin-right: 30px;
   border-radius: 10px;
 }
@@ -19,11 +18,9 @@
   margin-top: 20px;
   font-family: "Antic Slab", serif;
   text-align: justify;
-  /* font-variant: small-caps; */
 }
 
 .image {
-  /* width: 40vw; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,7 +47,6 @@
 @media (max-width: 1024px) {
   .presentation .image img {
     width: 35%;
-    height: auto;
   }
 
   .presentation .about {
@@ -59,16 +55,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .contacts i {
     font-size: 2em;
+  }
+
+  .presentation .image img {
+    width: 45%;
   }
 }
 
 @media (max-width: 600px) {
   .presentation .image img {
     width: 40%;
-    height: auto;
   }
   .presentation .about {
     font-size: 16px;
@@ -78,14 +77,12 @@
 @media (max-width: 500px) {
   .presentation .image img {
     width: 50%;
-    height: auto;
   }
 }
 
 @media (max-width: 400px) {
   .presentation .image img {
     width: 60%;
-    height: auto;
   }
   .contacts i {
     font-size: 25px;
@@ -96,69 +93,20 @@
   }
 }
 
-/* @media (max-width: 768px) {
-  .presentation .about {
-    width: 70vw;
+@media (min-height: 700px) {
+  .presentation {
+    height: 75vh;
   }
 }
 
-@media (max-width: 540px) {
-  .presentation img {
-    width: 200px;
-    height: 160px;
+@media (min-height: 800px) {
+  .presentation {
+    height: 80vh;
   }
 }
 
-@media (max-width: 420px) {
-  .presentation img {
-    width: 170px;
-    height: 130px;
-  }
-
-  .presentation .about {
-    font-size: 16px;
-    width: 80vw;
-  }
-
-  .presentation .image {
-    height: 20vh;
-    align-items: stretch;
-  }
-
-  .presentation img {
-    margin-top: 10px;
-  }
-
-  .contacts i {
-    font-size: 25px;
+@media (min-height: 1000px) {
+  .presentation {
+    height: 90vh;
   }
 }
-
-@media (max-width: 380px) {
-  .presentation img {
-    margin-top: 5px;
-  }
-
-  .presentation img {
-    width: 160px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 330px) {
-  .presentation img {
-    width: 140px;
-    height: 110px;
-    margin-top: 0px;
-  }
-
-  .presentation .about {
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 300px) {
-  .presentation img {
-    margin-top: 10px;
-  }
-} */
