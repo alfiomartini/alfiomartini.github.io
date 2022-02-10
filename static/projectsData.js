@@ -7,6 +7,7 @@ const jsProjects = [
     liveUrl: "https://alfiomartini.github.io/prog-language/",
     projectUrl: "https://github.com/alfiomartini/prog-language",
     keywords: ["javascript", "css"],
+    weight: 5,
   },
   {
     title: "An Arithmetic Calculating Machine",
@@ -16,6 +17,7 @@ const jsProjects = [
     liveUrl: "https://alfiomartini.github.io/calculator/",
     projectUrl: "https://github.com/alfiomartini/calculator",
     keywords: ["javascript", "css"],
+    weight: 4,
   },
   {
     title: "Arithmetic Quiz Generator",
@@ -25,6 +27,7 @@ const jsProjects = [
     liveUrl: "https://alfiomartini.github.io/arithmetic-quiz/",
     projectUrl: "https://github.com/alfiomartini/arithmetic-quiz",
     keywords: ["javascript", "css"],
+    weight: 3,
   },
 ];
 
@@ -37,6 +40,7 @@ const pythonProjects = [
     liveUrl: "https://gift-gh.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/gift",
     keywords: ["python", "django", "bootstrap", "sqlite", "css"],
+    weight: 5,
   },
   {
     title: "Bookmark Manager",
@@ -46,6 +50,7 @@ const pythonProjects = [
     liveUrl: "https://bkmark-mg.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/cs50Final",
     keywords: ["python", "flask", "bootstrap", "sqlite", "css"],
+    weight: 5,
   },
   {
     title: "A Flask Server for Widgets Collection",
@@ -79,6 +84,7 @@ const pythonProjects = [
     liveUrl: "https://widgets-flask.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/widgets_flask",
     keywords: ["python", "flask"],
+    weight: 3,
   },
   {
     title: "Social Network",
@@ -88,6 +94,7 @@ const pythonProjects = [
     liveUrl: "https://community-net.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/network",
     keywords: ["python", "django", "bootstrap", "sqlite", "css"],
+    weight: 5,
   },
   {
     title: "Email Client",
@@ -97,6 +104,7 @@ const pythonProjects = [
     liveUrl: "https://client-email.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/mail",
     keywords: ["python", "django", "bootstrap", "sqlite", "css"],
+    weight: 4,
   },
   {
     title: "E-Bay Clone",
@@ -107,6 +115,7 @@ const pythonProjects = [
     liveUrl: "https://clone-ebay.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/commerce",
     keywords: ["python", "django", "bootstrap", "sqlite", "css"],
+    weight: 4,
   },
   {
     title: "Book Reviews",
@@ -116,6 +125,7 @@ const pythonProjects = [
     liveUrl: "https://bkreviews.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/book-reviews",
     keywords: ["python", "flask", "bootstrap", "postgresql", "css"],
+    weight: 4,
   },
   {
     title: "Wiki",
@@ -125,6 +135,7 @@ const pythonProjects = [
     liveUrl: "https://web-docs.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/wiki",
     keywords: ["python", "django", "bootstrap", "css"],
+    weight: 3,
   },
   {
     title: "Stocks Manager",
@@ -134,6 +145,7 @@ const pythonProjects = [
     liveUrl: "https://iexstocks.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/finance",
     keywords: ["python", "flask", "bootstrap", "css"],
+    weight: 5,
   },
   {
     title: "City Weather",
@@ -143,6 +155,7 @@ const pythonProjects = [
     liveUrl: "https://city-7d-weather.herokuapp.com",
     projectUrl: "https://github.com/alfiomartini/city-weather",
     keywords: ["python", "flask", "bootstrap"],
+    weight: 3,
   },
 ];
 
@@ -155,6 +168,7 @@ const reactProjects = [
     liveUrl: "https://clothing-shop-front.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/clothing.shop.front",
     keywords: ["react", "css", "styled components"],
+    weight: 5,
   },
   {
     title: "Widgets Collection",
@@ -164,6 +178,7 @@ const reactProjects = [
     liveUrl: "https://widgets-front.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/widgets_flask",
     keywords: ["react", "bootstrap", "css", "semantic ui"],
+    weight: 4,
   },
   {
     title: "Face Detection",
@@ -173,6 +188,7 @@ const reactProjects = [
     liveUrl: "https://alfiomartini.github.io/face-detection-front/",
     projectUrl: "https://github.com/alfiomartini/face-detection-front",
     keywords: ["react", "bootstrap", "css"],
+    weight: 4,
   },
 ];
 
@@ -223,6 +239,7 @@ const nodeProjects = [
     liveUrl: "https://facedet-api.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/face-detection-api",
     keywords: ["nodejs", "postgresql"],
+    weight: 4,
   },
 ];
 

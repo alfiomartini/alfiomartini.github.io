@@ -24,13 +24,11 @@ function getProject({ title, readme, videoUrl, liveUrl, projectUrl }) {
 export function generatePage(projects, options = []) {
   let html = "";
   let counter = 0;
-  projects.forEach((projList) => {
-    projList.forEach((proj) => {
-      if (options.includes(proj.language)) {
-        html += getProject(proj);
-        counter++;
-      }
-    });
+  projects.forEach((proj) => {
+    if (options.includes(proj.language)) {
+      html += getProject(proj);
+      counter++;
+    }
   });
   return { html, counter };
 }

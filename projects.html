@@ -105,6 +105,12 @@
     import {generatePage} from './static/projects.js';
     import {projects} from './static/projectsData.js';
     const projectsElm = document.querySelector('.projects');
+    let flatCopy = projects.reduce((acc, projList) => {
+       acc = [...acc, ...projList];
+       return acc;
+    }, []);
+    // console.log('flatCopy', flatCopy);
+    flatCopy.sort((proj1, proj2) => proj2.weight - proj1.weight)
     
     // checkboxes
     function removeOption(name){
@@ -117,7 +123,7 @@
     }
 
     function updateUI(){
-      const {html, counter } = generatePage(projects, checkboxes);
+      const {html, counter } = generatePage(flatCopy, checkboxes);
       projectsElm.innerHTML = html;
       counterElm.textContent = counter;
     }
