@@ -1,10 +1,31 @@
-.projects {
+/* navbar */
+
+#search-bar {
+  margin-left: 20px;
+}
+
+.form-inline .projects {
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
   /* align-items: center; */
   min-width: 100%;
 }
+
+/* checkboxes */
+
+.checkboxes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#btn-counter {
+  padding-bottom: 8px;
+}
+
+/* projects */
 
 .projects .project {
   margin: 30px 0;

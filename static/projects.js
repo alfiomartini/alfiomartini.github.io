@@ -1,6 +1,6 @@
 import { projects } from "./projectsData.js";
 // for debugging only
-window.projects = projects;
+// window.projects = projects;
 
 function getProject({ title, readme, videoUrl, liveUrl, projectUrl }) {
   return `<div class="project" data-name=''>
@@ -21,16 +21,18 @@ function getProject({ title, readme, videoUrl, liveUrl, projectUrl }) {
           </div>`;
 }
 
-function generatePage(projects) {
+export function generatePage(projects, options = []) {
   let html = "";
+  let counter = 0;
   projects.forEach((projList) => {
     projList.forEach((proj) => {
-      console.log(proj.title);
-      html += getProject(proj);
+      if (options.includes(proj.language)) {
+        html += getProject(proj);
+        counter++;
+      }
     });
   });
-  return html;
+  return { html, counter };
 }
 
-export const projectsCode = generatePage(projects);
-// console.log(projectsCode);
+// export const projectsCode = generatePage(projects);

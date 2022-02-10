@@ -27,16 +27,135 @@
 </head>
 <body>
   <div class="main">
-    <header class="header"></header>
+    <header class="header">
+      <nav class = "navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="index.html">
+            <i class="fas fa-h-square fa-2x text-white  mr-2"></i>
+        </a>
+        <!-- Toggler/collapsible Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#collapsible">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="collapsible">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"> 
+              <a class="nav-link" href="projects.html"> Projects </a>  
+            </li>
+            <!-- Dropdown-->
+            <li class = "nav-item dropdown"> 
+              <a  class="nav-link dropdown-toggle"  href="#"
+                id="navbardrop" data-toggle="dropdown"> 
+                  Publications </a>
+              <div class="dropdown-menu"> 
+                <a class= "dropdown-item" href="publications.html#journals"> Journals </a>
+                <a class= "dropdown-item" href="publications.html#bookChap"> Book Chapters </a> 
+                <a class= "dropdown-item" href="publications.html#workshops"> Workshops </a>
+                <a class= "dropdown-item" href="publications.html#myTechRep"> Reports </a>
+              </div>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="resume.html"> Resume </a> 
+            </li>
+            <!-- <li>
+              <form class="form-inline" action="" id="search-bar">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </li> -->
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> 
+              <a class="nav-link" href="../resume/resume.pdf" target="_blank"
+              data-toggle="tooltip" data-placement="bottom" title="Resume in PDF"
+              > 
+                <i class="pdf fas  fa-file-pdf"></i>
+              </a> 
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="checkboxes">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input js" value="">JavaScript
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input python" value="">Python
+        </label>
+      </div> 
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input react" value="">React
+        </label>
+      </div> 
+      <button type="button" class="btn btn-primary btn-sm" id="btn-counter">
+        projects <span class="badge badge-light counter">0</span>
+      </button>
+    </section>
     <section class="projects mt-4">
     </section>
   </div>  <!-- end main -->
-  <script src="./static/fetch_navbar.js"></script>
+  <!-- <script src="./static/fetch_navbar.js"></script> -->
   <script type="module">
-    import {projectsCode} from './static/projects.js';
+    import {generatePage} from './static/projects.js';
+    import {projects} from './static/projectsData.js';
     const projectsElm = document.querySelector('.projects');
-    // console.log(projectsCode)
-    projectsElm.innerHTML = projectsCode;
-  </script>
+    
+    // checkboxes
+    function removeOption(name){
+      const index = checkboxes.indexOf(name);
+      if (index !== -1) checkboxes.splice(index, 1);
+    }
+
+    function addOption(name){
+       if (checkboxes.indexOf(name) === -1) checkboxes.push(name)
+    }
+
+    function updateUI(){
+      const {html, counter } = generatePage(projects, checkboxes);
+      projectsElm.innerHTML = html;
+      counterElm.textContent = counter;
+    }
+
+    const jsCheckBox = document.querySelector('.js');
+    const pythonCheckBox = document.querySelector('.python');
+    const reactCheckBox = document.querySelector('.react');
+    const counterElm = document.querySelector('.counter')
+
+    
+    // initialize UI
+    const checkboxes = ['javascript','python', 'react'];
+    window.checkboxes = checkboxes;
+    jsCheckBox.checked = true;
+    pythonCheckBox.checked = true;
+    reactCheckBox.checked = true;
+    updateUI()
+
+    // event listeners
+    jsCheckBox.addEventListener('click', () => {
+      if (jsCheckBox.checked) {
+        addOption('javascript')
+      }
+      else {
+        removeOption('javascript');
+      }
+       updateUI()
+    });
+    pythonCheckBox.addEventListener('click', () => {
+      if (pythonCheckBox.checked) addOption('python')
+      else removeOption('python');
+      updateUI()
+    });
+    reactCheckBox.addEventListener('click', () => {
+      if (reactCheckBox.checked) addOption('react')
+      else removeOption('react');
+      updateUI();
+    });
+</script>
 </body>
 </html>
