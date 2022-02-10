@@ -160,7 +160,7 @@ const reactProjects = [
   },
 ];
 
-nodeProjects = [
+const nodeProjects = [
   {
     title: "A Node.js Server for the Face Detection App",
     readme: `   <p>  The server implements the backend database
@@ -210,8 +210,8 @@ nodeProjects = [
 ];
 
 export const projects = [
-  nodeProjects,
-  pythonProjects,
   jsProjects,
   reactProjects,
+  pythonProjects,
+  nodeProjects,
 ];
