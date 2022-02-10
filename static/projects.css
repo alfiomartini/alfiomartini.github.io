@@ -116,6 +116,14 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
   }
 }
 
+@media (max-width: 450px) {
+  .checkboxes {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+  }
+}
+
 @media (max-width: 400px) {
   .project iframe {
     width: 250px;
