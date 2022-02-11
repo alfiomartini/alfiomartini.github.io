@@ -194,7 +194,7 @@ const reactProjects = [
     title: "Clothing Shop",
     language: "react",
     readme: `This is a React application that allows users to browse and buy different types of clothing, including hats, sneakers, jackets as well as mens's and women's specific types of clothes. The global state is managed with the <em>redux</em> library, and a certain amount of data persistence is supported for the items added to the shopping cart. Authentication and database support is implemented with Googles's  <em>Firebase</em> platform. Credit card payment is achieved through the use of <em>Stripe</em> (test mode only), while React components are styled with <em>SASS</em> and <em>styled components</em>.`,
-    videoUrl: "https://www.youtube.com/embed/mUVYzcFwOU?controls=0",
+    videoUrl: "https://www.youtube.com/embed/mUVYzcFwOUI?controls=0",
     liveUrl: "https://clothing-shop-front.herokuapp.com/",
     projectUrl: "https://github.com/alfiomartini/clothing.shop.front",
     keywords: ["react", "css", "styled components"],
