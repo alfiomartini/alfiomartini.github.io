@@ -32,7 +32,7 @@ const jsProjects = [
   {
     title: "A (Programming) Language based on Application Expressions",
     language: "javascript",
-    readme: `This is a parser/evaluator for a simple imperative programming language, whose constructs are uniformly expressed as (function) applications. The are special (reserved) forms of application expressions to express the usual imperative constructions for assignment, conditional, sequence, while loops and arithmetic operations. The language also supports some abstraction by the definition of (recursive) functions. Line comments and (one-dimensional) arrays are also provided.`,
+    readme: `This is a parser/evaluator for a simple imperative programming language, whose constructs are uniformly expressed as (function) applications. The language also supports some abstraction by the definition of (recursive) functions. Line comments and (one-dimensional) arrays are also provided. The program itself is a reconstruction/adaptation/extension of an original application developed by Marijn Haverbeke (Eloquent Javascript) and it is developed entirely with HTML/CSS/JavaScript.`,
     videoUrl: "https://www.youtube.com/embed/Qm986QymkfE?controls=0",
     liveUrl: "https://alfiomartini.github.io/prog-language/",
     projectUrl: "https://github.com/alfiomartini/prog-language",
