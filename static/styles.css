@@ -46,3 +46,7 @@ header .navbar .dropdown-menu .dropdown-item:hover {
 .pdf {
   color: whitesmoke;
 }
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
