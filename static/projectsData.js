@@ -1,5 +1,16 @@
 const jsProjects = [
   {
+    title: "About Me",
+    language: "javascript",
+    readme: `This is a simple application I wrote in order to present my hobbies and preferences in music. I also digress about my work around the field of Logic in Computer Science while I was teaching in the university, and tell how I got hooked, by pure chance,  into the area of web development. This page was written in HTML, CSS, and (vanilla) JavaScript.
+    `,
+    videoUrl: "https://www.youtube.com/embed/SWf5HPtrxfo?controls=0",
+    liveUrl: "https://alfiomartini.github.io/aboutMe/",
+    projectUrl: "https://github.com/alfiomartini/aboutMe",
+    keywords: ["javascript", "css"],
+    weigh: 5.5,
+  },
+  {
     title: "The Pig (Dice) Game",
     language: "javascript",
     readme: `This app implements the Pig (dice) Game. Players take turns to roll a single dice as many times as they wish, adding all roll results to a running total (50 points), but losing their gained score for the turn if they roll a 1. The program itself is a reconstruction/adaptation/extension of an original application developed by Hugo Di Francesco (Professional JavaScript) and it is developed entirely with HTML/CSS/JavaScript.`,
