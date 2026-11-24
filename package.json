@@ -1,0 +1,37 @@
+{
+  "name": "alfiomartini.github.io",
+  "version": "1.0.0",
+  "description": "Personal homepage",
+  "scripts": {
+    "format": "prettier --write \"*.html\" \"css/**/*.css\" \"js/**/*.js\" \"data/**/*.js\"",
+    "lint": "eslint js data && stylelint \"css/**/*.css\"",
+    "validate": "html-validate \"*.html\"",
+    "check-links": "linkinator index.html projects.html publications.html resume.html --skip '^https://|^http://(?!localhost|127\\.0\\.0\\.1|\\[)'",
+    "check": "npm run lint && npm run validate && npm run check-links",
+    "serve": "python3 -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfiomartini/alfiomartini.github.io.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alfiomartini/alfiomartini.github.io/issues"
+  },
+  "homepage": "https://github.com/alfiomartini/alfiomartini.github.io#readme",
+  "private": true,
+  "engines": {
+    "node": "^22.22.0 || >=24.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "html-validate": "^11.21.1",
+    "linkinator": "^8.1.0",
+    "prettier": "^3.10.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}

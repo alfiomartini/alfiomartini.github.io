@@ -1,0 +1,35 @@
+# Workflow name, shown in the "Actions" tab and next to each commit that triggered it.
+name: Linter
+
+# Trigger: the workflow runs whenever commits are pushed to any branch of the remote repository.
+on:
+  push:
+
+# The workflow only needs to read the repository contents.
+permissions:
+  contents: read
+
+jobs:
+  linter:
+    # Virtual machine (runner) that executes the steps.
+    runs-on: ubuntu-latest
+    steps:
+      # Copies the repository into the runner.
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      # Installs the newest Node.js version that satisfies the range of the project (see
+      # "engines" in package.json), and caches the npm downloads.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "^22.22.0 || >=24.8.0"
+          cache: npm
+
+      # Installs the exact versions recorded in package-lock.json.
+      - name: Install the development tools
+        run: npm ci
+
+      # Runs lint, validate and check-links (see "scripts" in package.json).
+      - name: Run the checks
+        run: npm run check
