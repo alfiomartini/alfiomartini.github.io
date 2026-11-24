@@ -1,0 +1,5 @@
+# robots.txt tells search engine crawlers which pages they may visit.
+# The rules below allow all crawlers to visit all pages of the site.
+
+User-agent: *
+Allow: /

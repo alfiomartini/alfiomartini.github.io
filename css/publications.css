@@ -46,7 +46,7 @@ span.title {
   scroll-margin-top: 100px;
 }
 
-@media (max-width: 320px) {
+@media (width <= 320px) {
   .pub-list {
     font-size: 0.7rem;
   }

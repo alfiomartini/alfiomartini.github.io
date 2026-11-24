@@ -1,167 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" defer> 
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" defer>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" defer>
-
-  <link href="./static/img/favicon.ico" rel="icon">
-  
-  <link rel="stylesheet"  href="static/styles.css">
-  <link rel="stylesheet"  href="static/projects.css">
-</head>
-<body>
-  <div class="main">
-    <header class="header">
-      <nav class = "navbar navbar-expand-md bg-dark navbar-dark">
-        <a href="index.html">
-            <i class="fas fa-h-square fa-2x text-white  mr-2"></i>
-        </a>
-        <!-- Toggler/collapsible Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" 
-          data-target="#collapsible">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="collapsible">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item"> 
-              <a class="nav-link" href="projects.html"> Projects </a>  
-            </li>
-            <!-- Dropdown-->
-            <li class = "nav-item dropdown"> 
-              <a  class="nav-link dropdown-toggle"  href="#"
-                id="navbardrop" data-toggle="dropdown"> 
-                  Publications </a>
-              <div class="dropdown-menu"> 
-                <a class= "dropdown-item" href="publications.html#journals"> Journals </a>
-                <a class= "dropdown-item" href="publications.html#bookChap"> Book Chapters </a> 
-                <a class= "dropdown-item" href="publications.html#workshops"> Workshops </a>
-                <a class= "dropdown-item" href="publications.html#myTechRep"> Reports </a>
-              </div>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="resume.html"> Resume </a> 
-            </li>
-            <!-- <li>
-              <form class="form-inline" action="" id="search-bar">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </li> -->
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"> 
-              <a class="nav-link" href="../resume/resume.pdf" target="_blank"
-              data-toggle="tooltip" data-placement="bottom" title="Resume in PDF"
-              > 
-                <i class="pdf fas  fa-file-pdf"></i>
-              </a> 
-            </li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <meta
+      name="description"
+      content="Web projects by Alfio Martini written in JavaScript, Python, React and Node.js, with demo videos and source code."
+    />
+    <meta name="theme-color" content="#12232e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projects" />
+    <meta
+      property="og:description"
+      content="Web projects by Alfio Martini written in JavaScript, Python, React and Node.js, with demo videos and source code."
+    />
+    <meta
+      property="og:url"
+      content="https://alfiomartini.github.io/projects.html"
+    />
+    <meta
+      property="og:image"
+      content="https://alfiomartini.github.io/assets/img/profile_picture_10_11_2020-min.jpg"
+    />
+    <link rel="canonical" href="https://alfiomartini.github.io/projects.html" />
+    <link href="./assets/img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <div class="main">
+      <header class="header"></header>
+      <section class="checkboxes">
+        <div class="form-check form-check-inline">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="language-javascript"
+            data-language="javascript"
+            value=""
+          />
+          <label class="form-check-label" for="language-javascript">JavaScript</label>
         </div>
-      </nav>
-    </header>
-    <section class="checkboxes">
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input js" value="">JavaScript
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input python" value="">Python
-        </label>
-      </div> 
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input react" value="">React
-        </label>
-      </div> 
-      <button type="button" class="btn btn-primary btn-sm" id="btn-counter">
-        projects <span class="badge badge-light counter">0</span>
-      </button>
-    </section>
-    <section class="projects mt-4">
-    </section>
-  </div>  <!-- end main -->
-  <script src="./static/fetch_navbar.js"></script>
-  <script type="module">
-    import {generatePage} from './static/projects.js';
-    import {projects} from './static/projectsData.js';
-    const projectsElm = document.querySelector('.projects');
-    let flatCopy = projects.reduce((acc, projList) => {
-       acc = [...acc, ...projList];
-       return acc;
-    }, []);
-    // console.log('flatCopy', flatCopy);
-    flatCopy.sort((proj1, proj2) => proj2.weight - proj1.weight)
-    
-    // checkboxes
-    function removeOption(name){
-      const index = checkboxes.indexOf(name);
-      if (index !== -1) checkboxes.splice(index, 1);
-    }
-
-    function addOption(name){
-       if (checkboxes.indexOf(name) === -1) checkboxes.push(name)
-    }
-
-    function updateUI(){
-      const {html, counter } = generatePage(flatCopy, checkboxes);
-      projectsElm.innerHTML = html;
-      counterElm.textContent = counter;
-    }
-
-    const jsCheckBox = document.querySelector('.js');
-    const pythonCheckBox = document.querySelector('.python');
-    const reactCheckBox = document.querySelector('.react');
-    const counterElm = document.querySelector('.counter')
-
-    
-    // initialize UI
-    const checkboxes = ['javascript','python', 'react'];
-    window.checkboxes = checkboxes;
-    jsCheckBox.checked = true;
-    pythonCheckBox.checked = true;
-    reactCheckBox.checked = true;
-    updateUI()
-
-    // event listeners
-    jsCheckBox.addEventListener('click', () => {
-      if (jsCheckBox.checked) {
-        addOption('javascript')
-      }
-      else {
-        removeOption('javascript');
-      }
-       updateUI()
-    });
-    pythonCheckBox.addEventListener('click', () => {
-      if (pythonCheckBox.checked) addOption('python')
-      else removeOption('python');
-      updateUI()
-    });
-    reactCheckBox.addEventListener('click', () => {
-      if (reactCheckBox.checked) addOption('react')
-      else removeOption('react');
-      updateUI();
-    });
-</script>
-</body>
+        <div class="form-check form-check-inline">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="language-python"
+            data-language="python"
+            value=""
+          />
+          <label class="form-check-label" for="language-python">Python</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="language-react"
+            data-language="react"
+            value=""
+          />
+          <label class="form-check-label" for="language-react">React</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="language-node"
+            data-language="node"
+            value=""
+          />
+          <label class="form-check-label" for="language-node">Node</label>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" id="btn-counter">
+          projects <span class="badge text-bg-light counter">0</span>
+        </button>
+      </section>
+      <section class="projects mt-4"></section>
+    </div>
+    <!-- end main -->
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/projects.js"></script>
+  </body>
 </html>

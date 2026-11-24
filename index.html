@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alfio Martini - Portfolio - Homepage</title>
-  
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" defer> 
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" defer>
-
-  <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet" defer>
-
-  <link href="./static/img/favicon.ico" rel="icon">
-
-  <link rel="stylesheet"  href="static/styles.css">
-  <link rel="stylesheet"  href="static/index.css">
-</head>
-<body>
-  <div class="main">
-    <header class="header"></header>
-    <section class="presentation">
-      <div>
-        <div class="image">
-          <img src="static/img/profile_picture_10_11_2020-min.jpg" alt="picture">
-          <div class="contacts">
-            <a href="https://www.linkedin.com/in/alfio-martini-32012423/" target="_blank">
-              <i class="fab fa-linkedin fa-2x text-white  mr-2"></i>
-            </a>
-            <!-- <a href="https://twitter.com/alfio_martini" target="_blank">
-              <i class="fab fa-twitter-square fa-2x text-white  mr-2"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alfio Martini - Portfolio - Homepage</title>
+    <meta
+      name="description"
+      content="Personal homepage of Alfio Martini, computer scientist: front-end development with React, serverless computing with AWS and Python, and logic in computer science."
+    />
+    <meta name="theme-color" content="#12232e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alfio Martini - Portfolio - Homepage" />
+    <meta
+      property="og:description"
+      content="Personal homepage of Alfio Martini, computer scientist: front-end development with React, serverless computing with AWS and Python, and logic in computer science."
+    />
+    <meta property="og:url" content="https://alfiomartini.github.io/" />
+    <meta
+      property="og:image"
+      content="https://alfiomartini.github.io/assets/img/profile_picture_10_11_2020-min.jpg"
+    />
+    <link rel="canonical" href="https://alfiomartini.github.io/" />
+    <link href="./assets/img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <header class="header"></header>
+      <section class="presentation">
+        <div>
+          <div class="image">
+            <img
+              src="assets/img/profile_picture_10_11_2020-min.jpg"
+              alt="picture"
+            />
+            <div class="contacts">
+              <a
+                href="https://www.linkedin.com/in/alfio-martini-32012423/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin fa-2x text-white me-2"></i>
+              </a>
+              <!-- <a href="https://twitter.com/alfio_martini" target="_blank">
+              <i class="fab fa-twitter-square fa-2x text-white  me-2"></i>
             </a> -->
-            <a href="mailto:alfio.martini@gmail.com">
-              <i class="fas fa-at fa-2x text-white mr-2"></i>
-            </a>
-            <a href="https://github.com/alfiomartini" target="_blank">
-              <i class="fab fa-github-square fa-2x text-white  mr-2"></i>
-            </a>
+              <a href="mailto:alfio.martini@gmail.com" aria-label="E-mail">
+                <i class="fas fa-at fa-2x text-white me-2"></i>
+              </a>
+              <a
+                href="https://github.com/alfiomartini"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-square-github fa-2x text-white me-2"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="about">
-        I'm a computer scientist specially interested in Front-End & Micro-Frontend development with React, serverless computing with AWS and Python, and the applications of Logic in Computer Science.</span>
-      </div>
-    </section>
-  </div>
-  <script src="./static/fetch_navbar.js"></script>
-</body>
+        <div class="about">
+         My work is mostly centered around React, Next.js, and TypeScript. For
+  backend and infrastructure work, I mainly use AWS Lambda, Node.js, and
+  Python. I build serverless applications using AWS SAM, with LocalStack
+  for local development and testing. For containerization, data storage,
+  and delivery, I use Docker, PostgreSQL, and GitLab CI/CD. With a
+  background in Logic and Formal Methods, I focus on building reliable
+  systems and learning deeply how things work.
+        </div>
+      </section>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

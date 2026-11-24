@@ -7,7 +7,9 @@
 .form-inline .projects {
   display: flex;
   flex-direction: column;
+
   /* justify-content: space-around; */
+
   /* align-items: center; */
   min-width: 100%;
 }
@@ -33,10 +35,9 @@
 
 .project {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .project:nth-child(odd) {
@@ -70,18 +71,17 @@
   margin: 5px;
 }
 
-.project .readme ul li {
-  margin: 5x;
-}
-
 code {
   color: lightgreen;
 }
+
 .project .readme h5 {
   color: lightblue;
   text-align: center;
+
   /* font-variant: small-caps; */
 }
+
 .project .video {
   display: flex;
   flex-direction: column;
@@ -94,6 +94,7 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
 .project iframe {
   width: 450px;
   height: calc(450px / 1.77);
+
   /* width: 26vw;
   height: calc(26vw / 1.78); */
   border-radius: 10px;
@@ -101,7 +102,7 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
 }
 
 .project .video-btns {
-  margin: 10px 0px;
+  margin: 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -109,14 +110,14 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
 
 /* Media queries */
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .project iframe {
     width: 350px;
     height: 175px;
   }
 }
 
-@media (max-width: 450px) {
+@media (width <= 450px) {
   .checkboxes {
     display: grid;
     grid-template-columns: auto auto;
@@ -124,7 +125,7 @@ https://stackoverflow.com/questions/33451481/scale-and-reposition-iframe-like-ba
   }
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
   .project iframe {
     width: 250px;
     height: 125px;

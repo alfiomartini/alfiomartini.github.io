@@ -1,3 +1,6 @@
+// The `readme` field of each project is trusted HTML written by the site author.
+// It is inserted into the page with innerHTML (see js/projects.js), so it must
+// never contain user-supplied data.
 const jsProjects = [
   {
     title: "About Me",
@@ -8,7 +11,7 @@ const jsProjects = [
     liveUrl: "https://alfiomartini.github.io/aboutMe/",
     projectUrl: "https://github.com/alfiomartini/aboutMe",
     keywords: ["javascript", "css"],
-    weigh: 5.5,
+    weight: 5.5,
   },
   {
     title: "The Pig (Dice) Game",
@@ -248,7 +251,7 @@ const reactProjects = [
 const nodeProjects = [
   {
     title: "A Node.js Server for the Face Detection App",
-    language: "javascript",
+    language: "node",
     readme: `   <p>  The server implements the backend database
     needed to store information about users (using PostgreSQL) and also encapsulate private keys needed to
     access the Clarifai API. The server is comprised of the following endpoints:
