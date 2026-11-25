@@ -39,21 +39,19 @@ alfiomartini.github.io/
 │   │   ├── picture_github.jpg
 │   │   └── profile_picture_10_11_2020-min.jpg
 │   └── pdf/
-│       ├── HarvardX CS50 Certificate _ edX_.pdf
-│       └── resume.pdf
+│       └── HarvardX CS50 Certificate _ edX_.pdf
 ├── css/
 │   ├── index.css
+│   ├── profile.css
 │   ├── projects.css
 │   ├── publications.css
-│   ├── resume.css
 │   └── styles.css                      Shared styles; loads Bootstrap and Font Awesome
 ├── data/
 │   └── projects.js                     Project data shown on the projects page
 ├── js/
 │   ├── main.js                         Shared entry module of all pages
 │   ├── navbar.js                       Renders the navigation bar (renderNavbar)
-│   ├── projects.js                     Filtering and rendering of the projects page
-│   └── resume.js                       Layout of the resume page
+│   └── projects.js                     Filtering and rendering of the projects page
 ├── .gitignore
 ├── .htmlvalidate.mjs
 ├── 404.html                            Page shown for unknown addresses
@@ -64,9 +62,9 @@ alfiomartini.github.io/
 ├── package-lock.json
 ├── package.json                        Development tools and npm scripts
 ├── prettier.config.mjs
+├── profile.html                        Profile page, with experience, education and certifications
 ├── projects.html                       Projects page, with language filter checkboxes
 ├── publications.html                   Publications page, in sections linked from the navbar
-├── resume.html                         Resume page, with skills, experience and education
 ├── robots.txt
 └── stylelint.config.mjs
 ```

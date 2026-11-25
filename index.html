@@ -28,47 +28,60 @@
   <body>
     <div class="main">
       <header class="header"></header>
-      <section class="presentation">
-        <div>
-          <div class="image">
-            <img
-              src="assets/img/profile_picture_10_11_2020-min.jpg"
-              alt="picture"
-            />
-            <div class="contacts">
-              <a
-                href="https://www.linkedin.com/in/alfio-martini-32012423/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin fa-2x text-white me-2"></i>
-              </a>
-              <!-- <a href="https://twitter.com/alfio_martini" target="_blank">
-              <i class="fab fa-twitter-square fa-2x text-white  me-2"></i>
-            </a> -->
-              <a href="mailto:alfio.martini@gmail.com" aria-label="E-mail">
-                <i class="fas fa-at fa-2x text-white me-2"></i>
-              </a>
-              <a
-                href="https://github.com/alfiomartini"
-                target="_blank"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-square-github fa-2x text-white me-2"></i>
-              </a>
-            </div>
+      <div class="landing">
+        <section class="landing-card bg-dark">
+          <img
+            class="landing-photo"
+            src="assets/img/profile_picture_10_11_2020-min.jpg"
+            alt="Alfio Martini"
+          />
+          <div class="landing-text">
+            <h1>Alfio Martini</h1>
+            <p class="landing-headline">
+              Senior Software Developer | PhD in Computer Science (Technical
+              University of Berlin)
+            </p>
+            <p class="landing-about">
+              My work is mostly centered around React, Next.js, and TypeScript.
+              For backend and infrastructure work, I mainly use AWS Lambda,
+              Node.js, and Python. I build serverless applications using AWS
+              SAM, with LocalStack for local development and testing. For
+              containerization, data storage, and delivery, I use Docker,
+              PostgreSQL, and GitLab CI/CD. With a background in Logic and
+              Formal Methods, I focus on building reliable systems and learning
+              deeply how things work.
+            </p>
+            <ul class="landing-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alfio-martini-32012423/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/alfiomartini"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="mailto:alfio.martini@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                  E-mail
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="about">
-         My work is mostly centered around React, Next.js, and TypeScript. For
-  backend and infrastructure work, I mainly use AWS Lambda, Node.js, and
-  Python. I build serverless applications using AWS SAM, with LocalStack
-  for local development and testing. For containerization, data storage,
-  and delivery, I use Docker, PostgreSQL, and GitLab CI/CD. With a
-  background in Logic and Formal Methods, I focus on building reliable
-  systems and learning deeply how things work.
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>

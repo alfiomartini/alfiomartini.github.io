@@ -22,12 +22,11 @@ There is no test suite.
 
 ## Architecture
 
-Pages: `index.html`, `projects.html`, `publications.html`, `resume.html` (plus `404.html`), all in the repository root. Each page has a minimal `<head>` (charset, viewport, title and `<meta>` elements, favicon, `css/styles.css`, and its own stylesheet `css/<page>.css`) and loads `js/main.js` as a module at the end of `<body>`.
+Pages: `index.html`, `projects.html`, `publications.html`, `profile.html` (plus `404.html`), all in the repository root. Each page has a minimal `<head>` (charset, viewport, title and `<meta>` elements, favicon, `css/styles.css`, and its own stylesheet `css/<page>.css`) and loads `js/main.js` as a module at the end of `<body>`.
 
 - **Library loading.** The versions of Bootstrap and Font Awesome are written only in two files: `css/styles.css` (`@import` of the Bootstrap and Font Awesome CSS and of the Antic Slab font) and `js/main.js` (imports the Bootstrap bundle, which includes Popper). To upgrade a library, edit those two files.
-- **Shared navbar.** Each page contains an empty `<header class="header"></header>`. `js/main.js` calls `renderNavbar()` from `js/navbar.js`, which holds the navbar markup, writes it into the `<header>` and initializes the Bootstrap tooltips. To change the navigation, edit `js/navbar.js`.
+- **Shared navbar.** Each page contains an empty `<header class="header"></header>`. `js/main.js` calls `renderNavbar()` from `js/navbar.js`, which holds the navbar markup and writes it into the `<header>`. To change the navigation, edit `js/navbar.js`.
 - **Projects page.** `data/projects.js` exports `projects`, an array of four arrays (`jsProjects`, `reactProjects`, `pythonProjects`, `nodeProjects`). `js/projects.js` flattens the arrays, sorts them by `weight` (descending), and renders the entries whose `language` is checked in the filter checkboxes. A single `change` handler serves all the checkboxes; each checkbox in `projects.html` carries a `data-language` attribute (`javascript`, `python`, `react`, `node`).
-- **Resume page.** `js/resume.js` rearranges the `.skills`, `.experience` and `.education` sections on window resize (layouts changing at 696 px and 1020 px). `assets/pdf/resume.pdf` is the PDF linked from the navbar.
 - **Assets.** Images and PDFs are in `assets/img/` and `assets/pdf/`.
 
 ## Data format of `data/projects.js`
