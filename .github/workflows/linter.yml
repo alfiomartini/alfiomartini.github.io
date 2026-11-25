@@ -16,12 +16,12 @@ jobs:
     steps:
       # Copies the repository into the runner.
       - name: Check out the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Installs the newest Node.js version that satisfies the range of the project (see
       # "engines" in package.json), and caches the npm downloads.
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "^22.22.0 || >=24.8.0"
           cache: npm
