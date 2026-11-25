@@ -29,8 +29,15 @@ body {
   top: 20px;
 }
 
+/* The navbar list is a flex container; the gap spaces its options. */
+@media (width >= 576px) {
+  .navbar-nav {
+    gap: 20px;
+  }
+}
+
 a.nav-link {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 header .navbar .dropdown-menu {

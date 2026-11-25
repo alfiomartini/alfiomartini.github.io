@@ -17,7 +17,7 @@
  * - a link to `index.html`, shown as an icon;
  * - the toggler button, which collapses and expands the menu on narrow screens;
  * - the links "Projects", "Publications" (a dropdown with four links to
- *   sections of `publications.html`), "Resume", and "About Me" (an external
+ *   sections of `publications.html`), "Profile", and "About Me" (an external
  *   page);
  * - a link to the resume in PDF, shown as an icon with a tooltip.
  *
@@ -63,6 +63,9 @@ const template = `
         <a class="nav-link" href="resume.html"> Resume </a>
       </li>
       -->
+      <li class="nav-item">
+        <a class="nav-link" href="resume-new.html"> Profile </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="https://alfiomartini.github.io/aboutMe/" target="_blank"> About Me</a>
