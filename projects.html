@@ -6,14 +6,14 @@
     <title>Projects</title>
     <meta
       name="description"
-      content="Web projects by Alfio Martini written in JavaScript, Python, React and Node.js, with demo videos and source code."
+      content="Web projects by Alfio Martini written in JavaScript, Python and React, with their descriptions and source code."
     />
     <meta name="theme-color" content="#12232e" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Projects" />
     <meta
       property="og:description"
-      content="Web projects by Alfio Martini written in JavaScript, Python, React and Node.js, with demo videos and source code."
+      content="Web projects by Alfio Martini written in JavaScript, Python and React, with their descriptions and source code."
     />
     <meta
       property="og:url"
@@ -31,52 +31,56 @@
   <body>
     <div class="main">
       <header class="header"></header>
-      <section class="checkboxes">
-        <div class="form-check form-check-inline">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            id="language-javascript"
-            data-language="javascript"
-            value=""
-          />
-          <label class="form-check-label" for="language-javascript">JavaScript</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            id="language-python"
-            data-language="python"
-            value=""
-          />
-          <label class="form-check-label" for="language-python">Python</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            id="language-react"
-            data-language="react"
-            value=""
-          />
-          <label class="form-check-label" for="language-react">React</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            id="language-node"
-            data-language="node"
-            value=""
-          />
-          <label class="form-check-label" for="language-node">Node</label>
-        </div>
-        <button type="button" class="btn btn-primary btn-sm" id="btn-counter">
-          projects <span class="badge text-bg-light counter">0</span>
-        </button>
-      </section>
-      <section class="projects mt-4"></section>
+      <div class="projects-page">
+        <section class="intro">
+          <h1>Projects</h1>
+          <p class="intro-text">
+            Experiments I carried out while learning the foundations of web
+            development. Select a project to watch its demo.
+          </p>
+          <div class="toolbar">
+            <div class="checkboxes">
+              <input
+                type="checkbox"
+                class="filter-input"
+                id="language-javascript"
+                data-language="javascript"
+              />
+              <label class="filter-label" for="language-javascript">JavaScript</label>
+              <input
+                type="checkbox"
+                class="filter-input"
+                id="language-python"
+                data-language="python"
+              />
+              <label class="filter-label" for="language-python">Python</label>
+              <input
+                type="checkbox"
+                class="filter-input"
+                id="language-react"
+                data-language="react"
+              />
+              <label class="filter-label" for="language-react">React</label>
+            </div>
+            <p class="filters-count">
+              <span class="counter">0</span> projects shown
+            </p>
+          </div>
+        </section>
+        <ul class="projects"></ul>
+        <dialog class="project-dialog" id="project-dialog">
+          <button type="button" class="dialog-close" aria-label="Close">
+            <i class="fas fa-xmark"></i>
+          </button>
+          <div class="dialog-body">
+            <p class="dialog-language"></p>
+            <h2 class="dialog-title">Project</h2>
+            <div class="dialog-text"></div>
+            <ul class="dialog-keywords"></ul>
+            <div class="dialog-actions"></div>
+          </div>
+        </dialog>
+      </div>
     </div>
     <!-- end main -->
     <script type="module" src="./js/main.js"></script>

@@ -63,7 +63,7 @@ alfiomartini.github.io/
 ├── package.json                        Development tools and npm scripts
 ├── prettier.config.mjs
 ├── profile.html                        Profile page, with experience, education and certifications
-├── projects.html                       Projects page, with language filter checkboxes
+├── projects.html                       Projects page: language filters, project cards and a detail dialog
 ├── publications.html                   Publications page, in sections linked from the navbar
 ├── robots.txt
 └── stylelint.config.mjs

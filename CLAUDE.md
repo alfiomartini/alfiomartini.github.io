@@ -26,22 +26,21 @@ Pages: `index.html`, `projects.html`, `publications.html`, `profile.html` (plus 
 
 - **Library loading.** The versions of Bootstrap and Font Awesome are written only in two files: `css/styles.css` (`@import` of the Bootstrap and Font Awesome CSS and of the Antic Slab font) and `js/main.js` (imports the Bootstrap bundle, which includes Popper). To upgrade a library, edit those two files.
 - **Shared navbar.** Each page contains an empty `<header class="header"></header>`. `js/main.js` calls `renderNavbar()` from `js/navbar.js`, which holds the navbar markup and writes it into the `<header>`. To change the navigation, edit `js/navbar.js`.
-- **Projects page.** `data/projects.js` exports `projects`, an array of four arrays (`jsProjects`, `reactProjects`, `pythonProjects`, `nodeProjects`). `js/projects.js` flattens the arrays, sorts them by `weight` (descending), and renders the entries whose `language` is checked in the filter checkboxes. A single `change` handler serves all the checkboxes; each checkbox in `projects.html` carries a `data-language` attribute (`javascript`, `python`, `react`, `node`).
+- **Projects page.** `data/projects.js` exports `projects`, an array of three arrays (`jsProjects`, `reactProjects`, `pythonProjects`). `js/projects.js` flattens the arrays, sorts them by `weight` (descending), and renders one card for each entry whose `language` is checked in the filters. A card shows the language, the title and an excerpt of the description (the first 150 characters, as plain text). A click on a card opens a `<dialog>` with the full description, the keywords and the "Live" and "Code" buttons. The filters are checkboxes, hidden and shown as buttons through their labels. A single `change` handler serves all the checkboxes; each checkbox in `projects.html` carries a `data-language` attribute (`javascript`, `python`, `react`).
 - **Assets.** Images and PDFs are in `assets/img/` and `assets/pdf/`.
 
 ## Data format of `data/projects.js`
 
-Each entry of the four arrays is an object with these properties:
+Each entry of the three arrays is an object with these properties:
 
 | Property     | Content                                                                                        |
 | ------------ | ---------------------------------------------------------------------------------------------- |
 | `title`      | Project name.                                                                                  |
-| `language`   | One of `javascript`, `python`, `react`, `node`. It must match the `data-language` of a checkbox in `projects.html`, otherwise the project is never displayed. |
+| `language`   | One of `javascript`, `python`, `react`. It must match the `data-language` of a checkbox in `projects.html`, otherwise the project is never displayed. |
 | `readme`     | Description, as trusted HTML. It is inserted with `innerHTML`, so it must never contain user-supplied data. |
-| `videoUrl`   | YouTube embed URL, used as the `src` of an iframe.                                             |
 | `liveUrl`    | URL of the deployed application.                                                               |
 | `projectUrl` | URL of the source code.                                                                        |
-| `keywords`   | Array of strings.                                                                              |
+| `keywords`   | Array of strings, shown as labels in the dialog of the project.                                |
 | `weight`     | Number; projects with a higher weight are listed first.                                        |
 | `disabled`   | Optional. If `true`, the "Live" button is disabled.                                            |
 
