@@ -26,6 +26,13 @@ The tools listed in `package.json` are development dependencies only. They are n
 
 The same checks run on GitHub, with the GitHub Actions workflow `.github/workflows/linter.yml`, whenever commits are pushed to any branch of the remote repository. The result is shown next to each commit and in the "Actions" tab.
 
+## Deployment
+
+The site is published by GitHub Pages in two steps. The first is a setting of the repository, and the second comes from the name of the repository.
+
+1. **Publishing the files.** On github.com, open the repository, then **Settings**, then **Pages** (in the left sidebar, under "Code and automation"). Under "Build and deployment", the **Source** is "Deploy from a branch", and the **Branch** is `master` with the folder `/ (root)`. Each push to `master` starts the GitHub workflow "pages build and deployment", which appears in the "Actions" tab.
+2. **Being the homepage.** This is not a setting. A repository named `<username>.github.io` is a _user site_, and it is served at the root address, `https://alfiomartini.github.io/`. Every other repository is a _project site_, and it is served under its own name, at `https://alfiomartini.github.io/<repository-name>/`.
+
 ## Directory layout
 
 ```
