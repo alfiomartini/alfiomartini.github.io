@@ -3,3 +3,4 @@ node_modules/
 notes.txt
 projects_old.html
 redesign/
+.env.local

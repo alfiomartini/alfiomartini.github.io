@@ -16,8 +16,7 @@
  * HTML markup of the navigation bar. It contains, in this order:
  * - the toggler button, which collapses and expands the menu on narrow screens;
  * - the links "Home", "Profile", "Projects", "Publications" (a dropdown
- *   with four links to sections of `publications.html`), and "About Me" (an
- *   external page).
+ *   with four links to sections of `publications.html`), and "About Me".
  *
  * The class names in the markup come from Bootstrap 5 (for example `navbar`,
  * `navbar-expand-sm` and `bg-dark`).
@@ -56,7 +55,7 @@ const template = `
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://alfiomartini.github.io/aboutMe/" target="_blank"> About Me</a>
+        <a class="nav-link" href="about.html"> About Me </a>
       </li>
     </ul>
   </div>

@@ -6,7 +6,7 @@
     "format": "prettier --write \"*.html\" \"css/**/*.css\" \"js/**/*.js\" \"data/**/*.js\"",
     "lint": "eslint js data && stylelint \"css/**/*.css\"",
     "validate": "html-validate \"*.html\"",
-    "check-links": "linkinator index.html projects.html publications.html profile.html --skip '^https://|^http://(?!localhost|127\\.0\\.0\\.1|\\[)'",
+    "check-links": "linkinator index.html projects.html publications.html profile.html about.html --skip '^https://|^http://(?!localhost|127\\.0\\.0\\.1|\\[)'",
     "check": "npm run lint && npm run validate && npm run check-links",
     "serve": "python3 -m http.server 8000"
   },

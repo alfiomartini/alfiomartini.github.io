@@ -22,11 +22,12 @@ There is no test suite.
 
 ## Architecture
 
-Pages: `index.html`, `projects.html`, `publications.html`, `profile.html` (plus `404.html`), all in the repository root. Each page has a minimal `<head>` (charset, viewport, title and `<meta>` elements, favicon, `css/styles.css`, and its own stylesheet `css/<page>.css`) and loads `js/main.js` as a module at the end of `<body>`.
+Pages: `index.html`, `projects.html`, `publications.html`, `profile.html`, `about.html` (plus `404.html`), all in the repository root. Each page has a minimal `<head>` (charset, viewport, title and `<meta>` elements, favicon, `css/styles.css`, and its own stylesheet `css/<page>.css`) and loads `js/main.js` as a module at the end of `<body>`.
 
 - **Library loading.** The versions of Bootstrap and Font Awesome are written only in two files: `css/styles.css` (`@import` of the Bootstrap and Font Awesome CSS and of the Antic Slab font) and `js/main.js` (imports the Bootstrap bundle, which includes Popper). To upgrade a library, edit those two files.
 - **Shared navbar.** Each page contains an empty `<header class="header"></header>`. `js/main.js` calls `renderNavbar()` from `js/navbar.js`, which holds the navbar markup and writes it into the `<header>`. To change the navigation, edit `js/navbar.js`.
 - **Projects page.** `data/projects.js` exports `projects`, an array of three arrays (`jsProjects`, `reactProjects`, `pythonProjects`). `js/projects.js` flattens the arrays, sorts them by `weight` (descending), and renders one card for each entry whose `language` is checked in the filters. A card shows the language, the title and an excerpt of the description (the first 150 characters, as plain text). A click on a card opens a `<dialog>` with the full description, the keywords and the "Live" and "Code" buttons. The filters are checkboxes, hidden and shown as buttons through their labels. A single `change` handler serves all the checkboxes; each checkbox in `projects.html` carries a `data-language` attribute (`javascript`, `python`, `react`).
+- **About Me page.** The text of `about.html` is written directly in the HTML. Each topic is an `<article class="topic">` with a lead sentence and the rest of the text inside a `<details>` element ("Read more"). `js/about.js` only marks, in the side index, the link of the section that is on the screen (`IntersectionObserver`). The photos are in `assets/img/about/`. The links of the Music tile are YouTube searches and need no API key.
 - **Assets.** Images and PDFs are in `assets/img/` and `assets/pdf/`.
 
 ## Data format of `data/projects.js`

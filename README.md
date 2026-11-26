@@ -35,12 +35,14 @@ alfiomartini.github.io/
 │       └── linter.yml                  Runs `npm run check` on every push
 ├── assets/
 │   ├── img/
+│   │   ├── about/                      Images of the About Me page
 │   │   ├── favicon.ico
 │   │   ├── picture_github.jpg
 │   │   └── profile_picture_10_11_2020-min.jpg
 │   └── pdf/
 │       └── HarvardX CS50 Certificate _ edX_.pdf
 ├── css/
+│   ├── about.css
 │   ├── index.css
 │   ├── profile.css
 │   ├── projects.css
@@ -49,12 +51,14 @@ alfiomartini.github.io/
 ├── data/
 │   └── projects.js                     Project data shown on the projects page
 ├── js/
+│   ├── about.js                        Section index of the About Me page
 │   ├── main.js                         Shared entry module of all pages
 │   ├── navbar.js                       Renders the navigation bar (renderNavbar)
 │   └── projects.js                     Filtering and rendering of the projects page
 ├── .gitignore
 ├── .htmlvalidate.mjs
 ├── 404.html                            Page shown for unknown addresses
+├── about.html                          About Me page: logic, web development and hobbies
 ├── CLAUDE.md
 ├── README.md
 ├── eslint.config.mjs
